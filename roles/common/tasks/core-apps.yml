@@ -1,0 +1,92 @@
+- name: install Terminal 
+  community.general.pacman:
+   name:
+    - kitty
+    - tmux
+    - neovim
+    - mlocate
+   state: present
+
+- name: Install FileBrowser
+  community.general.pacman:
+   name:
+    - thunar
+    - thunar-volman
+    - gvfs-mtp
+    - obsidian
+    - thunar-archive-plugin
+   state: present
+
+- name: install git and downloaders
+  community.general.pacman:
+   name:
+    - git
+    - wget
+    - curl
+   state: present
+
+- name: install CLI and vim tools
+  community.general.pacman:
+   name:
+    - thefuck
+    - lsd
+    - vim
+    - source-highlight
+    - tree
+    - base-devel
+    - ripgrep
+    - bat
+    - lazygit
+    - xclip
+    - htop
+    - nmap
+   state: present
+
+- name: install Firewall
+  community.general.pacman:
+   name:
+    - ufw
+   state: present
+
+- name: bluetooth and audio
+  community.general.pacman:
+   name:
+    - bluez
+    - bluez-utils
+    - blueman
+    - pipewire
+    - pipewire-pulse
+    - pavucontrol
+   state: present
+  
+- name: install all the zip tools
+  community.general.pacman:
+   name:
+    - atool
+    - p7zip
+    - unrar
+    - unzip
+    - xz
+    - tar
+    - gzip
+    - bzip2
+    - zip
+   state: present
+
+- name: install fonts
+  community.general.pacman:
+   name:
+    - ttf-font-awesome
+   state: present
+
+- name: Install Themes 
+  become: yes
+  become_user: "{{ username }}"
+  ignore_errors: yes
+  aur:
+    use: yay
+    name:
+     - nordic-theme
+     - nordzy-cursors
+     - nordzy-icon-theme
+     - rcm

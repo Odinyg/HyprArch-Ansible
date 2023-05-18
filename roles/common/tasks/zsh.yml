@@ -1,0 +1,18 @@
+---
+
+- name: install zsh
+  community.general.pacman:
+   name: 
+    - zsh
+    - zsh-completions
+    - zsh-syntax-highlighting
+    - fzf
+   state: present
+
+- name: change "{{ username }}"'s shell to zsh
+  become: yes
+  user:
+   name: "{{ username }}"
+   shell: /usr/bin/zsh
+
+

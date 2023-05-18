@@ -1,0 +1,8 @@
+- name: install Neovim
+  community.general.pacman:
+   name: 
+    - wine
+    - lutris
+    - lib32-vkd3d
+
+   state: present 

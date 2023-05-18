@@ -1,0 +1,15 @@
+- name: Clone yay
+  become: yes
+  become_user: "{{ username }}"
+  git:
+    repo: https://aur.archlinux.org/yay-bin.git
+    dest: "/home/{{ username }}/yay"
+    update: true
+
+- name: Build and install yay
+  become: yes
+  become_user: "{{ username }}"
+  command:
+    chdir: "/home/{{ username }}/yay"
+    cmd: "makepkg -sfi --noconfirm"
+    creates: /usr/bin/yay

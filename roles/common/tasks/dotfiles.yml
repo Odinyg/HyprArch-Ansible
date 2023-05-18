@@ -1,0 +1,26 @@
+- name: Clone user dotfiles
+  git: repo={{ dotfiles.url }} dest=/tmp/{{ dotfiles.destination }} accept_hostkey=yes update=no
+  become: yes
+  become_user: "{{ username }}"
+
+- name: Install user dotfiles
+  command: rcup -d /tmp/{{ dotfiles.destination}} {{ dotfiles.rcup_flags }}
+  become: yes
+  become_user: "{{ username }}" 
+
+- name: move and replace .config
+  ansible.builtin.copy:
+    src: /tmp/movetodotfile/.config
+    dest: /home/{{ username }}
+    force: yes
+    owner: "{{ username }}"
+    group: "{{ username }}"
+
+- name: move and replace .zshenv
+  ansible.builtin.copy:
+    src: /tmp/movetodotfile/.zsenv
+    dest: /home/{{ username }}
+    force: yes
+    owner: "{{ username }}"
+    group: "{{ username }}"
+

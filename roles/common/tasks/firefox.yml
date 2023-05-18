@@ -1,0 +1,21 @@
+- name: install firefox
+  community.general.pacman:
+   name: 
+    - firefox
+   state: present 
+#- name: Install ublock addon
+#  firefox_addon:
+#    url: https://addons.mozilla.org/nb-NO/firefox/addon/ublock-origin/
+#    state: present
+#- name: Install bitwarden addon
+#  firefox_addon: 
+#    url: https://addons.mozilla.org/nb-NO/firefox/addon/bitwarden-password-manager
+#    state: present
+#- name: Install nord theme addon
+#  firefox_addon: 
+#    url: https://addons.mozilla.org/nb-NO/firefox/addon/nord-theme/
+#    state: present
+#- name: Install bitwarden addon
+#  firefox_addon: 
+#    url: https://addons.mozilla.org/nb-NO/firefox/addon/nord-theme/
+#    state: present

@@ -1,0 +1,50 @@
+### Playbook Configuration Variables
+# You may modify the following variables to customize the playbook to your
+# specific needs, however do not remove any variables, they are all required
+# for the playbook to function.
+
+## User info
+username: none
+
+## Task Configuration
+setup_zsh: True
+
+## Dotfiles
+## Please make sure to update 
+pull_dotfiles: True
+
+dotfiles:
+    url: https://github.com/Odinyg/HyprDots 
+    destination: movetodotfile
+    rcup_flags: -fx README.md
+
+## AUR vars
+## ===========================
+use_aur: True
+
+aur:
+    dir: aur
+    packages:
+        - yay
+        - downgrade
+        - zplug
+        - miller
+        - myrepos
+        - ctmg
+        - spiped
+## ===========================
+
+## App Preferences
+# Web Browser
+install_firefox: True
+
+## install gaming apps and dependecys
+install_gaming: True 
+
+## Installs Nvidia
+install_nvidia: True
+
+## Install yay apps
+install_yay_apps: True
+
+

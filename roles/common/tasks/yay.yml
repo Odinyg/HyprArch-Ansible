@@ -1,0 +1,48 @@
+- name: git packages 
+  become: yes
+  become_user: "{{ username }}"
+  ignore_errors: yes
+  aur:
+    use: yay
+    name:
+      - grimblast-git 
+      - sddm-git 
+      - hyprpicker-git
+      - waybar-hyprland-git
+    skip_pgp_check:
+
+- name: hyprland  packages 
+  become: yes
+  become_user: "{{ username }}"
+  ignore_errors: yes
+  aur:
+    use: yay
+    name:
+      - hyprland 
+      - wl-clipboard 
+      - wf-recorder 
+      - rofi 
+      - wlogout 
+      - swaylock-effects 
+      - dunst 
+      - kitty
+
+- name: fonts and themes packages 
+  become: yes
+  become_user: "{{ username }}"
+  ignore_errors: yes
+  aur:
+    use: yay
+    name:
+      - ttf-nerd-fonts-symbols-common 
+      - otf-firamono-nerd 
+      - inter-font otf-sora 
+      - ttf-fantasque-nerd 
+      - noto-fonts 
+      - noto-fonts-emoji
+      - ttf-comforta
+      - ttf-jetbrains-mono-nerd 
+      - ttf-icomoon-feather 
+      - ttf-iosevka-nerd 
+      - adobe-source-code-pro-fonts
+      - nwg-look-bin
