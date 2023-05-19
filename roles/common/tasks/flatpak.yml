@@ -1,0 +1,16 @@
+- name: Install chat apps flatpak
+  community.general.flatpak:
+    name:
+      - xyz.diamondb.gtkcord4
+      - com.github.IsmaelMartinez.teams_for_linux
+
+
+- name: Install Productivity apps flatpak
+  community.general.flatpak:
+    name:
+      - im.pidgin.Pidgin
+      - com.ultimaker.cura
+      - io.dbeaver.DBeaverCommunity
+      - com.sublimetext.three
+      - md.obsidian.Obsidian
+      - org.mozilla.Thunderbird

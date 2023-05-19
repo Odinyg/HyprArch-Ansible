@@ -7,11 +7,11 @@
 username: none
 
 ## Task Configuration
-setup_zsh: True
+setup_zsh: false
 
 ## Dotfiles
 ## Please make sure to update 
-pull_dotfiles: True
+pull_dotfiles: false
 
 dotfiles:
     url: https://github.com/Odinyg/HyprDots 
@@ -38,8 +38,11 @@ aur:
 # Web Browser
 install_firefox: True
 
+## install flatpaks
+install_flatpak: True
+
 ## install gaming apps and dependecys
-install_gaming: True 
+install_gaming: False 
 
 ## Installs Nvidia
 install_nvidia: True

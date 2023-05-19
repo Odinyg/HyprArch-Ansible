@@ -23,6 +23,7 @@
     - git
     - wget
     - curl
+    - flatpak
    state: present
 
 - name: install CLI and vim tools
@@ -48,16 +49,16 @@
     - ufw
    state: present
 
-- name: bluetooth and audio
-  community.general.pacman:
-   name:
-    - bluez
-    - bluez-utils
-    - blueman
-    - pipewire
-    - pipewire-pulse
-    - pavucontrol
-   state: present
+#- name: bluetooth and audio
+#  community.general.pacman:
+#   name:
+#    - bluez
+#    - bluez-utils
+#    - blueman
+#    - pipewire
+#    - pipewire-pulse
+#    - pavucontrol
+#   state: present
   
 - name: install all the zip tools
   community.general.pacman:
