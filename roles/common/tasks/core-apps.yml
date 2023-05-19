@@ -13,7 +13,6 @@
     - thunar
     - thunar-volman
     - gvfs-mtp
-    - obsidian
     - thunar-archive-plugin
    state: present
 
@@ -74,12 +73,6 @@
     - zip
    state: present
 
-- name: install fonts
-  community.general.pacman:
-   name:
-    - ttf-font-awesome
-   state: present
-
 - name: Install Themes 
   become: yes
   become_user: "{{ username }}"
@@ -88,6 +81,7 @@
     use: yay
     name:
      - nordic-theme
+     - ttf-font-awesome
      - nordzy-cursors
      - nordzy-icon-theme
      - rcm

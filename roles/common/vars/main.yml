@@ -48,6 +48,7 @@ install_gaming: False
 install_nvidia: True
 
 ## Install yay apps
-install_yay_apps: True
+install_yay: True
 
-
+## install work stuff
+install_work: True

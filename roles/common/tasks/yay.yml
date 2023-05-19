@@ -25,7 +25,6 @@
       - wlogout 
       - swaylock-effects 
       - dunst 
-      - kitty
 
 - name: fonts and themes packages 
   become: yes

@@ -1,0 +1,21 @@
+## work stuff
+
+- name:  
+  community.general.flatpak:
+    name:
+      - com.github.IsmaelMartinez.teams_for_linux
+      - io.dbeaver.DBeaverCommunity
+      - org.onlyoffice.desktopeditors
+      - org.mozilla.Thunderbird
+
+- name: hyprland  packages 
+  become: yes
+  become_user: "{{ username }}"
+  ignore_errors: yes
+  aur:
+    use: yay
+    name:
+      - prospect-mail-appimage
+      - rustdesk-git
+      - 1password
+      - google-messages

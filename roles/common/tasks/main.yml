@@ -20,8 +20,11 @@
 # Web Browser
 - include_tasks: firefox.yml
   when: install_firefox == True
+
+# flatpak 
 - include_tasks: flatpak.yml
   when: install_flatpak == True
+
 # gaming
 - include_tasks: gaming.yml
   when: install_gaming == True
@@ -35,9 +38,11 @@
 
 # yay apps
 - include_tasks: yay.yml
-  when: install_yay_apps == True
+  when: install_yay == True
 
-
+# Work Stuff
+- include_tasks: Work.yml
+  when: install_work == True
 
 
 

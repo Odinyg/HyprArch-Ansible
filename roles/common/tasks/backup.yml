@@ -1,0 +1,11 @@
+## backup
+
+- name: git packages 
+  become: yes
+  become_user: "{{ username }}"
+  ignore_errors: yes
+  aur:
+    use: yay
+    name:
+      - syncthing
+      - rsync
