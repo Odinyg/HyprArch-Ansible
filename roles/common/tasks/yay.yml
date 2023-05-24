@@ -9,7 +9,6 @@
       - sddm-git 
       - hyprpicker-git
       - waybar-hyprland-git
-    skip_pgp_check:
 
 - name: hyprland  packages 
   become: yes
