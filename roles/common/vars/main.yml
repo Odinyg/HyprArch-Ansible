@@ -11,7 +11,7 @@ setup_zsh: false
 
 ## Dotfiles
 ## Please make sure to update 
-pull_dotfiles: false
+pull_dotfiles: true
 
 dotfiles:
     url: https://github.com/Odinyg/HyprDots 
