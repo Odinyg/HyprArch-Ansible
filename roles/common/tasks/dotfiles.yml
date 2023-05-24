@@ -18,7 +18,7 @@
 
 - name: move and replace .zshenv
   ansible.builtin.copy:
-    src: /tmp/movetodotfile/.zsenv
+    src: /tmp/movetodotfile/.zshenv
     dest: /home/{{ username }}
     force: yes
     owner: "{{ username }}"
