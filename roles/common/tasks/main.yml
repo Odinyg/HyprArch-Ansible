@@ -6,6 +6,8 @@
 
 # Configure pacman (colorize and repos)
 
+- include_tasks: zsh.yml
+  when: install_zsh == True
 # AUR apps
 - include_tasks: aur.yml
   when: use_aur == True
@@ -32,9 +34,6 @@
 - include_tasks: nvidia.yml
   when: install_nvidia == True
 
-# Install and configure zsh
-- include_tasks: zsh.yml
-  when: setup_zsh == True
 
 # yay apps
 - include_tasks: yay.yml

@@ -7,7 +7,6 @@
 username: none
 
 ## Task Configuration
-setup_zsh: false
 
 ## Dotfiles
 ## Please make sure to update 
@@ -35,6 +34,8 @@ aur:
 ## ===========================
 
 ## App Preferences
+
+install_zsh: True 
 # Web Browser
 install_firefox: True
 
@@ -42,7 +43,7 @@ install_firefox: True
 install_flatpak: True
 
 ## install gaming apps and dependecys
-install_gaming: False 
+install_gaming: True
 
 ## Installs Nvidia
 install_nvidia: True

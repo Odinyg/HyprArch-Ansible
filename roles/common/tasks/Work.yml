@@ -1,6 +1,6 @@
 ## work stuff
 
-- name:  
+- name: workstuff paks 
   community.general.flatpak:
     name:
       - com.github.IsmaelMartinez.teams_for_linux
@@ -8,7 +8,7 @@
       - org.onlyoffice.desktopeditors
       - org.mozilla.Thunderbird
 
-- name: hyprland  packages 
+- name: Work apps from yay NEED to Type sudo pass
   become: yes
   become_user: "{{ username }}"
   ignore_errors: yes

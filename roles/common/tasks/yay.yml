@@ -1,29 +1,3 @@
-- name: git packages 
-  become: yes
-  become_user: "{{ username }}"
-  ignore_errors: yes
-  aur:
-    use: yay
-    name:
-      - grimblast-git 
-      - sddm-git 
-      - hyprpicker-git
-      - waybar-hyprland-git
-
-- name: hyprland  packages 
-  become: yes
-  become_user: "{{ username }}"
-  ignore_errors: yes
-  aur:
-    use: yay
-    name:
-      - hyprland 
-      - wl-clipboard 
-      - wf-recorder 
-      - rofi 
-      - wlogout 
-      - swaylock-effects 
-      - dunst 
 
 - name: fonts and themes packages 
   become: yes
@@ -34,6 +8,7 @@
     name:
       - ttf-nerd-fonts-symbols-common 
       - otf-firamono-nerd 
+      - grimblast-git 
       - inter-font otf-sora 
       - ttf-fantasque-nerd 
       - noto-fonts 
